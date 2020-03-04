@@ -5,16 +5,21 @@
 $font: 'Ubuntu', sans-serif;
 $font-titleh2: 'Gagalin', sans-serif;
 $font-titleh3: 'Lifehack', sans-serif;
+
 $normal-fsize: 0.8rem;
+
 $orange: #e45028;
 $light-orange: #f9b43b;
+$dark-gray: #2f3234;
+
+$section-height: 650px;
 
 @mixin theme ($dark-theme: true) {
   @if $dark-theme {
     background-color:#000;
     color: $light-orange;
   } @else {
-    color: #000;
+    color: $dark-gray;
     background-color: white;
   }
 }
@@ -50,7 +55,6 @@ body {
 }
 
 section {
-  @include theme($dark-theme: true);
 }
 
 a {
@@ -132,6 +136,11 @@ table {
   z-index: 100;
 }
 
+.container--advantages {
+  justify-content: center;
+  flex-direction: column;
+}
+
 .container--flex-start {
   align-items: baseline;
 }
@@ -139,6 +148,10 @@ table {
 .title {
   font-family: $font-titleh2;
   font-size: 72px;
+
+  &--advantages {
+    margin-bottom: 45px;
+  }
 }
 
 .header {
@@ -196,7 +209,7 @@ table {
 }
 
 .about {
-  min-height: 650px;
+  min-height: $section-height;
   background-color: #000;
   background-image: url('/img/video-bg.png');
   background-position: center;
@@ -204,6 +217,8 @@ table {
   background-size: cover;
   display: flex;
   padding: 40px 0;
+  position: relative;
+  @include theme($dark-theme: true);
 
   &:after {
     content: "";
@@ -239,8 +254,8 @@ table {
 .pagination {
   z-index: 99999;
   position: fixed;
-  top: 15%;
-  right: 15%;
+  top: 10%;
+  right: 10%;
 
   &__item {
     padding-bottom: 5px;
@@ -268,5 +283,41 @@ table {
     border-radius: 50%;
     border: 1px solid white;
     position: relative;
+  }
+}
+
+.advantages {
+  min-height: $section-height;
+  background-color: white;
+  background-image: url('/img/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  @include theme($dark-theme: false);
+
+  &__list {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 300px;
+    //color: $dark-gray;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+  }
+
+  &__icon {
+    min-height: 100px;
+    margin-bottom: 25px;
   }
 }
