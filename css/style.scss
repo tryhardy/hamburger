@@ -7,6 +7,17 @@ $font-titleh2: 'Gagalin', sans-serif;
 $font-titleh3: 'Lifehack', sans-serif;
 $normal-fsize: 0.8rem;
 $orange: #e45028;
+$light-orange: #f9b43b;
+
+@mixin theme ($dark-theme: true) {
+  @if $dark-theme {
+    background-color:#000;
+    color: $light-orange;
+  } @else {
+    color: #000;
+    background-color: white;
+  }
+}
 
 @mixin uppercase-font ($white-color){
   font-size: $normal-fsize;
@@ -39,7 +50,7 @@ body {
 }
 
 section {
-    width: 100%;
+  @include theme($dark-theme: true);
 }
 
 a {
@@ -209,5 +220,53 @@ table {
     flex: 1;
     display: flex;
     align-items: center;
+  }
+
+  &__text {
+    font-size: 65px;
+    color: white;
+  }
+
+  &__image {
+    padding: 0px 30px 80px 50px;
+    background-image: url('/icons/drops.svg');
+    background-size: contain;
+    background-position: 100% 25%;
+    background-repeat: no-repeat;
+  }
+}
+
+.pagination {
+  z-index: 99999;
+  position: fixed;
+  top: 15%;
+  right: 15%;
+
+  &__item {
+    padding-bottom: 5px;
+
+    &--active {
+
+      a:after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__link {
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: relative;
   }
 }
