@@ -1,6 +1,6 @@
-
 @import "fonts";
 @import "normalize/normalize";
+@import "blocks/primary-menu";
 
 $font: 'Ubuntu', sans-serif;
 $font-titleh2: 'Gagalin', sans-serif;
@@ -14,10 +14,12 @@ $dark-gray: #2f3234;
 
 $section-height: 650px;
 
+$photos: (1: '/img/reviews/1.png', 2:'/img/reviews/1.png', 3: '/img/reviews/1.png', 4: '/img/reviews/1.png', 5: '/img/reviews/1.png', 6: '/img/reviews/1.png', 7: '/img/reviews/1.png', 8: '/img/reviews/1.png');
+
 @mixin theme ($dark-theme: true) {
   @if $dark-theme {
     background-color:#000;
-    color: $light-orange;
+    color: white;
   } @else {
     color: $dark-gray;
     background-color: white;
@@ -39,6 +41,11 @@ $section-height: 650px;
   transition: all 0.3s;
 }
 
+@mixin desc__text {
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
 html,
 body {
@@ -84,7 +91,7 @@ h6 {
   margin: 0;
 }
 
-h2 {
+h2, h4 {
   font-family: $font-titleh2;
 }
 
@@ -115,42 +122,49 @@ table {
     position: relative;
     padding: 0 10px;
     box-sizing: border-box;
+
+    &--w960 {
+      max-width: 960px;
+    }
+
+    &--w1100 {
+      max-width: 1100px;
+    }
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--about {
+      flex-direction: column;
+      z-index: 100;
+    }
+
+    &--advantages {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &--flex-start {
+      align-items: baseline;
+    }
+
+    &--review {
+      padding: 0;
+    }
+    
   }
-  
-.container--w960 {
-    max-width: 920px;
-}
-
-.container--w1020 {
-  max-width: 1020px;
-}
-
-.container--flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container--about {
-  flex-direction: column;
-  z-index: 100;
-}
-
-.container--advantages {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.container--flex-start {
-  align-items: baseline;
-}
 
 .title {
   font-family: $font-titleh2;
   font-size: 72px;
+  color: $light-orange;
 
   &--advantages {
     margin-bottom: 45px;
+    color: $dark-gray;
   }
 }
 
@@ -159,17 +173,13 @@ table {
   width: 100%;
   padding: 10px 0;
   z-index: 9999;
-
-  &__center {
-    flex: 1;
-  }
-
-  &__left {
-    padding-right: 65px;
-  }
-
 }
-
+.header__center {
+  flex: 1;
+}
+.header__left {
+  padding-right: 65px;
+}
 
 .primary-menu {
   &__list {
@@ -193,7 +203,6 @@ table {
     color: inherit;
   }
 }
-
 
 .btn {
   @include uppercase-font (white);
@@ -304,10 +313,7 @@ table {
 
   &__item {
     max-width: 300px;
-    //color: $dark-gray;
-    font-weight: lighter;
-    font-size: 14px;
-    line-height: 2;
+    @include desc__text;
   }
 
   &__title {
@@ -319,5 +325,77 @@ table {
   &__icon {
     min-height: 100px;
     margin-bottom: 25px;
+  }
+}
+
+.review {
+  background-color: #000;
+  @include theme($dark-theme: true);
+  max-height: 650px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 25%;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .review__content {
+      opacity: 1;
+      left: 0;
+    }
+
+    &--active .review__content {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    transition: all 0.3s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__photo {
+    img {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include desc__text;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: $dark-gray;
+    width: auto;
+    padding: 10px 15px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #1f2122;
+    }
   }
 }
