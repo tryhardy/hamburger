@@ -31,12 +31,24 @@
       font-size: 65px;
       color: white;
     }
+
+    &__desc {
+      flex: 1 1 50%;
+    }
   
     &__image {
-      padding: 0px 30px 80px 50px;
+      padding: 0px 35px 70px 0;
       background-image: url('/icons/drops.svg');
       background-size: contain;
       background-position: 100% 25%;
       background-repeat: no-repeat;
+      flex: 1 1 50%;
     }
+
+  &__arrow-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   }

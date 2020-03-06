@@ -5,6 +5,7 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      flex: 1;
     }
   
     &__item {
@@ -22,7 +23,18 @@
         left: 0;
       }
     }
-  
+
+    &__photo {
+      overflow: hidden;
+      height: 100%;
+
+      //img {
+      //  width: auto;
+      //  height: 100%;
+      //}
+    
+    }
+
     &__content {
       padding: 20px;
       position: absolute;
@@ -41,6 +53,8 @@
     &__photo {
       img {
         display: block;
+        width: auto;
+        height: 100%;
       }
     }
   

@@ -231,6 +231,10 @@ h6 {
   margin: 0;
 }
 
+img {
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -239,6 +243,7 @@ section {
   height: 100vh;
   min-width: 650px;
   position: relative;
+  display: flex;
 }
 
 a {
@@ -314,6 +319,8 @@ table {
 }
 .container--review {
   padding: 0;
+  display: flex;
+  flex: 1;
 }
 
 .title {
@@ -396,19 +403,29 @@ table {
   font-size: 65px;
   color: white;
 }
+.about__desc {
+  flex: 1 1 50%;
+}
 .about__image {
-  padding: 0px 30px 80px 50px;
+  padding: 0px 35px 70px 0;
   background-image: url("/icons/drops.svg");
   background-size: contain;
   background-position: 100% 25%;
   background-repeat: no-repeat;
+  flex: 1 1 50%;
+}
+.about__arrow-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .pagination {
   z-index: 99999;
   position: fixed;
   top: 10%;
-  right: 10%;
+  right: 5%;
 }
 .pagination__item {
   padding-bottom: 5px;
@@ -460,8 +477,9 @@ table {
   margin-bottom: 25px;
 }
 .advantages__icon {
-  min-height: 100px;
-  margin-bottom: 25px;
+  min-height: 110px;
+  max-width: 60px;
+  margin: auto;
 }
 
 .review {
@@ -471,6 +489,7 @@ table {
 .review__list {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
 }
 .review__item {
   flex: 1 1 25%;
@@ -484,6 +503,10 @@ table {
 .review__item--active .review__content {
   opacity: 1;
   left: 0;
+}
+.review__photo {
+  overflow: hidden;
+  height: 100%;
 }
 .review__content {
   padding: 20px;
@@ -501,6 +524,8 @@ table {
 }
 .review__photo img {
   display: block;
+  width: auto;
+  height: 100%;
 }
 .review__title {
   margin-bottom: 20px;
