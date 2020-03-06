@@ -1,0 +1,32 @@
+.advantages {
+    min-height: $section-height;
+    background-color: white;
+    background-image: url('/img/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    @include theme($dark-theme: false);
+  
+    &__list {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+    }
+  
+    &__item {
+      max-width: 300px;
+      @include desc__text;
+    }
+  
+    &__title {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 25px;
+    }
+  
+    &__icon {
+      min-height: 100px;
+      margin-bottom: 25px;
+    }
+}

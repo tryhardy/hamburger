@@ -1,0 +1,15 @@
+@import "./settings/normalize";
+@import './settings/vars';
+@import './settings/mixins';
+@import './settings/fonts';
+@import './settings/base';
+
+
+//components
+@import './components/header';
+@import './components/primary-menu';
+@import './components/about';
+@import './components/pagination';
+@import './components/advantages';
+@import './components/review';
+@import './components/buttons';

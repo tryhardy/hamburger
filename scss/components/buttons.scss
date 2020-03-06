@@ -1,0 +1,13 @@
+.btn {
+    @include uppercase-font (white);
+    
+    &__link {
+      @include btn;
+  
+      &:hover {
+        background-color: #c1401e;
+      }
+    }
+  
+  }
+  

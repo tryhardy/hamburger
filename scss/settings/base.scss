@@ -1,0 +1,145 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    line-height: 1.42;
+    position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  list-style: none;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+  
+section {
+    height: 100vh;
+    min-width: 650px;
+    position: relative;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+p {
+    margin: 0;
+}
+  
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+ul li {
+    list-style: none;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+  
+h2, h4 {
+    font-family: $font-titleh2;
+}
+  
+h3 {
+    font-family: $font-titleh3;
+}
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+    
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    
+.wrapper__content {
+    flex: 1;
+}
+
+.container {
+    width: 95%;
+    max-width: $container;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+  
+ 
+    &--about {
+        z-index: 100;
+    }
+  
+    &--advantages {
+        justify-content: center;
+        flex-direction: column;
+    }
+  
+    &--flex-start {
+        align-items: baseline;
+    }
+  
+    &--review {
+        padding: 0;
+    }
+      
+}
+
+.title {
+    font-family: $font-titleh2;
+    font-size: 72px;
+    color: $light-orange;
+  
+    &--advantages {
+      margin-bottom: 45px;
+      color: $dark-gray;
+    }
+}

@@ -5,226 +5,229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. Burger</title>
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container container--w960 container--flex">
-            <div class="header__left">
-                <div class="logo">
-                    <a class="logo__link" href="index.html">
-                        <img src="icons/logo.svg">
-                    </a>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__left">
+                    <div class="logo">
+                        <a class="logo__link" href="index.html">
+                            <img src="icons/logo.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__center">
+                    <div class="primary-menu">
+                        <ul class="primary-menu__list">
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">О нас</a>
+                            </li>
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">Бургеры</a>
+                            </li>
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">Команда</a>
+                            </li>
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">Меню</a>
+                            </li>
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">Как мы работаем</a>
+                            </li>
+                            <li class="primary-menu__item">
+                                <a class="primary-menu__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <div class="btn">
+                        <a class="btn__link" href="#">Заказать</a>
+                    </div>
                 </div>
             </div>
-            <div class="header__center">
-                <div class="primary-menu">
-                    <ul class="primary-menu__list">
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">О нас</a>
+        </header>
+        <div class="maincontent">
+            <section class="about">
+                <div class="container container--about">
+                    <div class="about__content">
+                        <div class="about__image">
+                            <img src="img/burger.png">
+                        </div>
+                        <div class="about__desc">
+                            <h2 class="title">
+                                Мы делаем
+                            </h2>
+                            <h3 class="about__text">
+                                натуральные бургеры
+                            </h3>
+                        </div>
+                    </div>
+        
+                    <div class="about__arrow-down">
+                        <a class="arrow-down" href="#advantages">
+                            <img src="icons/arrow-scroll.svg">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="advantages" class="advantages">
+                <div class="container container--advantages">
+                    <h2 class="title title--advantages">
+                        Мы лучшие
+                    </h2>
+                    <ul class="advantages__list">
+                        <li class="advantages__item">
+                            <div class="advantages__icon icon-meat">
+                                <img src="icons/meat.svg">
+                            </div>
+                            <div class="advantages__content">
+                                <h3 class="advantages__title">
+                                    100% свежее мясо
+                                </h3>
+                                <p class="advantages__text">
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                </p>
+                            </div>
                         </li>
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">Бургеры</a>
+                        <li class="advantages__item">
+                            <div class="advantages__icon icon-hand">
+                                <img src="icons/hand.svg">
+                            </div>
+                            <div class="advantages__content">
+                                <h3 class="advantages__title">
+                                    Ручная сборка
+                                </h3>
+                                <p class="advantages__text">
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                </p>
+                            </div>
                         </li>
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">Команда</a>
-                        </li>
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">Меню</a>
-                        </li>
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">Отзывы</a>
-                        </li>
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">Как мы работаем</a>
-                        </li>
-                        <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">Контакты</a>
+                        <li class="advantages__item">
+                            <div class="advantages__content">
+                                <div class="advantages__icon icon-natural">
+                                    <img src="icons/natural.svg">
+                                </div>
+                                <h3 class="advantages__title">
+                                    Натуральные ингредиенты
+                                </h3>
+                                <p class="advantages__text">
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                </p>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="header__right">
-                <div class="btn">
-                    <a class="btn__link" href="#">Заказать</a>
-                </div>
-            </div>
+            </section>
+            <section id="review" class="review">
+                <div class="container container--review container--w1100 container--flex">
+                    <ul class="review__list">
+                        <li class="review__item">
+                            <div class="review__photo">
+                               <img src="/img/reviews/1.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item review__item--active">
+                            <div class="review__photo">
+                                <img src="/img/reviews/2.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item">
+                            <div class="review__photo">
+                                <img src="/img/reviews/3.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item">
+                            <div class="review__photo">
+                                <img src="/img/reviews/4.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item">
+                            <div class="review__photo">
+                                <img src="/img/reviews/5.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item">
+                            <div class="review__photo">
+                                <img src="/img/reviews/6.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item">
+                            <div class="review__photo">
+                                <img src="/img/reviews/7.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="review__item">
+                            <div class="review__photo">
+                                <img src="/img/reviews/8.png">
+                            </div>
+                            <div class="review__content">
+                                <h4 class="review__title">Константин Спилберг</h4>
+                                <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                                <div class="review__detail">
+                                    <a class="review__button" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </li>
+                    </li>
+                </ul>
+            </section>
         </div>
-    </header>
-    <section class="about">
-        <div class="container container--about container--w1100 container--flex">
-            <div class="about__content">
-                <div class="about__image">
-                    <img src="img/burger.png">
-                </div>
-                <div class="about__desc">
-                    <h2 class="title">
-                        Мы делаем
-                    </h2>
-                    <h3 class="about__text">
-                        натуральные бургеры
-                    </h3>
-                </div>
-            </div>
-
-            <div class="about__arrow-down">
-                <a class="arrow-down" href="#advantages">
-                    <img src="icons/arrow-scroll.svg">
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="advantages" class="advantages">
-        <div class="container container--advantages container--w1100 container--flex">
-            <h2 class="title title--advantages">
-                Мы лучшие
-            </h2>
-            <ul class="advantages__list">
-                <li class="advantages__item">
-                    <div class="advantages__icon icon-meat">
-                        <img src="icons/meat.svg">
-                    </div>
-                    <div class="advantages__content">
-                        <h3 class="advantages__title">
-                            100% свежее мясо
-                        </h3>
-                        <p class="advantages__text">
-                            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
-                        </p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__icon icon-hand">
-                        <img src="icons/hand.svg">
-                    </div>
-                    <div class="advantages__content">
-                        <h3 class="advantages__title">
-                            Ручная сборка
-                        </h3>
-                        <p class="advantages__text">
-                            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
-                        </p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__content">
-                        <div class="advantages__icon icon-natural">
-                            <img src="icons/natural.svg">
-                        </div>
-                        <h3 class="advantages__title">
-                            Натуральные ингредиенты
-                        </h3>
-                        <p class="advantages__text">
-                            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="review" class="review">
-        <div class="container container--review container--w1100 container--flex">
-            <ul class="review__list">
-                <li class="review__item">
-                    <div class="review__photo">
-                       <img src="/img/reviews/1.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item review__item--active">
-                    <div class="review__photo">
-                        <img src="/img/reviews/2.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item">
-                    <div class="review__photo">
-                        <img src="/img/reviews/3.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item">
-                    <div class="review__photo">
-                        <img src="/img/reviews/4.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item">
-                    <div class="review__photo">
-                        <img src="/img/reviews/5.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item">
-                    <div class="review__photo">
-                        <img src="/img/reviews/6.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item">
-                    <div class="review__photo">
-                        <img src="/img/reviews/7.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="review__item">
-                    <div class="review__photo">
-                        <img src="/img/reviews/8.png">
-                    </div>
-                    <div class="review__content">
-                        <h4 class="review__title">Константин Спилберг</h4>
-                        <p class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                        <div class="review__detail">
-                            <a class="review__button" href="#">Подробнее</a>
-                        </div>
-                    </div>
-                </li>
-            </li>
-        </ul>
-    </section>
-
+    </div>
     <div class="pagination">
         <ul class="pagination__list">
             <li class="pagination__item pagination__item--active">
