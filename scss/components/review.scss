@@ -6,12 +6,14 @@
       display: flex;
       flex-wrap: wrap;
       flex: 1;
+      height: 100%;
     }
   
     &__item {
       flex: 1 1 25%;
       position: relative;
       overflow: hidden;
+      height: 50%;
   
       &:hover .review__content {
         opacity: 1;
@@ -24,16 +26,6 @@
       }
     }
 
-    &__photo {
-      overflow: hidden;
-      height: 100%;
-
-      //img {
-      //  width: auto;
-      //  height: 100%;
-      //}
-    
-    }
 
     &__content {
       padding: 20px;
@@ -51,10 +43,14 @@
     }
   
     &__photo {
+      overflow: hidden;
+      height: 100%;
+
       img {
         display: block;
-        width: auto;
         height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     }
   

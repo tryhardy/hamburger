@@ -15,7 +15,7 @@
     }
   
     &__item {
-      max-width: 300px;
+      width: calc(100% / 3 - 20px);
       @include desc__text;
     }
   

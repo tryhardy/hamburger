@@ -53,7 +53,7 @@
             </div>
         </header>
         <div class="maincontent">
-            <section class="about">
+            <section id="about" class="section about">
                 <div class="container container--about">
                     <div class="about__content">
                         <div class="about__image">
@@ -76,13 +76,13 @@
                     </div>
                 </div>
             </section>
-            <section id="advantages" class="advantages">
+            <section id="advantages" class="section advantages">
                 <div class="container container--advantages">
                     <h2 class="title title--advantages">
                         Мы лучшие
                     </h2>
                     <ul class="advantages__list">
-                        <li class="advantages__item">
+                        <li class="advantages__item advantage">
                             <div class="advantages__icon icon-meat">
                                 <img src="icons/meat.svg">
                             </div>
@@ -95,7 +95,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="advantages__item">
+                        <li class="advantages__item advantage">
                             <div class="advantages__icon icon-hand">
                                 <img src="icons/hand.svg">
                             </div>
@@ -108,7 +108,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="advantages__item">
+                        <li class="advantages__item advantage">
                             <div class="advantages__content">
                                 <div class="advantages__icon icon-natural">
                                     <img src="icons/natural.svg">
@@ -124,10 +124,10 @@
                     </ul>
                 </div>
             </section>
-            <section id="review" class="review">
+            <section id="review" class="section review">
                 <div class="container--review">
                     <ul class="review__list">
-                        <li class="review__item">
+                        <li class="review__item reviews">
                             <div class="review__photo">
                                <img src="/img/reviews/1.png">
                             </div>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review__item review__item--active">
+                        <li class="review__item reviews review__item--active">
                             <div class="review__photo">
                                 <img src="/img/reviews/2.png">
                             </div>
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review__item">
+                        <li class="review__item reviews">
                             <div class="review__photo">
                                 <img src="/img/reviews/3.png">
                             </div>
@@ -225,6 +225,50 @@
                         </li>
                     </li>
                 </ul>
+            </section>
+            <section class="section order--section">
+                <div class="container container--order">
+                    <h2 class="title title--order">
+                        Закажите доставку
+                    </h2>
+                    <form class="order">
+                        <div class="order__row">
+                            <label class="order__block">
+                                <div class="order__title">Имя</div>
+                                <input class="order__input" type="text">
+                            </label>
+                            <label class="order__block">
+                                <div class="order__title">Телефон</div>
+                                <input class="order__input" type="text">
+                            </label>
+                        </div>
+                        <div class="order__row">
+                            <label class="order__block">
+                                <div class="order__title">Улица</div>
+                                <input class="order__input" type="text">
+                            </label>
+                        </div>
+                        <div class="order__row">
+                            <label class="order__block">
+                                <div class="order__title">Дом</div>
+                                <input class="order__input" type="text">
+                            </label>
+                            <label class="order__block">
+                                <div class="order__title">Корпус</div>
+                                <input class="order__input" type="text">
+                            </label>
+                            <label class="order__block">
+                                <div class="order__title">Квартира</div>
+                                <input class="order__input" type="text">
+                            </label>
+                            <label class="order__block">
+                                <div class="order__title">Этаж</div>
+                                <input class="order__input" type="text">
+                            </label>
+                        </div>
+                        
+                    </form>
+                </div>
             </section>
         </div>
     </div>
