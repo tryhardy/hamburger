@@ -5,16 +5,16 @@
     right: 5%;
   
     &__item {
-      padding-bottom: 5px;
+      padding-bottom: 20px;
   
       &--active {
   
         a:after {
           content: "";
           position: absolute;
-          background-color: white;
-          width: 5px;
-          height: 5px;
+          border: 1px solid white;
+          width: 16px;
+          height: 16px;
           border-radius: 50%;
           top: 50%;
           left: 50%;
@@ -24,11 +24,11 @@
     }
   
     &__link {
-      width: 16px;
-      height: 16px;
+      width: 6px;
+      height: 6px;
       display: block;
       border-radius: 50%;
-      border: 1px solid white;
+      background-color: white;
       position: relative;
     }
   }

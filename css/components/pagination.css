@@ -1,0 +1,28 @@
+.pagination {
+  z-index: 99999;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+}
+.pagination__item {
+  padding-bottom: 20px;
+}
+.pagination__item--active a:after {
+  content: "";
+  position: absolute;
+  border: 1px solid white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pagination__link {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+}

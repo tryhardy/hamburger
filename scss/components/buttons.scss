@@ -1,13 +1,32 @@
 .btn {
-    @include uppercase-font (white);
     
     &__link {
-      @include btn;
+      font-size: $normal-fsize;
+      text-transform: uppercase;
+      font-weight: 500;
+      background-color: $orange;
+      color: inherit;
+      padding: 12px 15px;
+      border-radius: 4px;
+      transition: all 0.3s;
+      border: none;
+      color: white;
   
       &:hover {
         background-color: #c1401e;
       }
     }
   
+}
+
+.btn--black {
+
+  .btn__link {
+    background-color: #2f3234;
+    
+    &:hover {
+      background-color: #1f2122;
+    }
   }
+}
   

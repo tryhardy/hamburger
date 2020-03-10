@@ -328,6 +328,9 @@ table {
   margin-bottom: 45px;
   color: #2f3234;
 }
+.title--order {
+  margin-bottom: 40px;
+}
 
 .header {
   position: absolute;
@@ -403,7 +406,7 @@ table {
   flex: 1 1 50%;
 }
 .about__image {
-  padding: 0px 35px 70px 0;
+  padding: 0px 35px 70px 35px;
   background-image: url("/icons/drops.svg");
   background-size: contain;
   background-position: 100% 25%;
@@ -424,25 +427,25 @@ table {
   right: 5%;
 }
 .pagination__item {
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 .pagination__item--active a:after {
   content: "";
   position: absolute;
-  background-color: white;
-  width: 5px;
-  height: 5px;
+  border: 1px solid white;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .pagination__link {
-  width: 16px;
-  height: 16px;
+  width: 6px;
+  height: 6px;
   display: block;
   border-radius: 50%;
-  border: 1px solid white;
+  background-color: white;
   position: relative;
 }
 
@@ -535,35 +538,28 @@ table {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.review__button {
-  color: white;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 500;
-  background-color: #2f3234;
-  width: auto;
-  padding: 10px 15px;
-  border-radius: 4px;
-}
-.review__button:hover {
-  background-color: #1f2122;
-}
 
-.btn {
+.btn__link {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: white;
-}
-.btn__link {
   background-color: #e45028;
   color: inherit;
   padding: 12px 15px;
   border-radius: 4px;
   transition: all 0.3s;
+  border: none;
+  color: white;
 }
 .btn__link:hover {
   background-color: #c1401e;
+}
+
+.btn--black .btn__link {
+  background-color: #2f3234;
+}
+.btn--black .btn__link:hover {
+  background-color: #1f2122;
 }
 
 .order--section {
@@ -586,9 +582,6 @@ table {
 .order__block:last-child {
   margin-right: 0;
 }
-.order__title {
-  margin-bottom: 5px;
-}
 .order__input {
   width: 100%;
   padding: 8px 21px;
@@ -598,4 +591,5 @@ table {
 
 .container--order {
   flex-wrap: wrap;
+  align-content: center;
 }
