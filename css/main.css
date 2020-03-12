@@ -336,6 +336,10 @@ table {
   margin-bottom: 50px;
 }
 
+.arrow-down__svg {
+  fill: white;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -349,6 +353,10 @@ table {
 
 .header__left {
   padding-right: 65px;
+}
+
+.logo__link {
+  display: block;
 }
 
 .primary-menu__list {
@@ -538,12 +546,16 @@ table {
   transform: rotate(0deg);
 }
 .team__item--active .team__content {
-  display: flex;
+  min-height: 100px;
 }
 .team__content {
   display: flex;
-  display: none;
   margin-top: 20px;
+  height: 0;
+  overflow: hidden;
+}
+.team__name {
+  width: 95%;
 }
 .team__photo {
   width: 100%;
@@ -568,6 +580,7 @@ table {
 .team__post {
   font-weight: bold;
   margin-bottom: 10px;
+  width: 100%;
 }
 .team__description {
   font-weight: lighter;
@@ -654,6 +667,9 @@ table {
   background-color: #1f2122;
 }
 
+.order {
+  display: flex;
+}
 .order--section {
   background-color: #000;
   background-image: url("/img/bg-order.jpg");
@@ -661,6 +677,13 @@ table {
   background-position: center;
   background-size: cover;
   color: white;
+}
+.order__column {
+  flex: 1 1 50%;
+  margin-right: 20px;
+}
+.order__column:last-child {
+  margin-right: 20px;
 }
 .order__row {
   margin-bottom: 14px;
@@ -674,14 +697,181 @@ table {
 .order__block:last-child {
   margin-right: 0;
 }
+.order__block--radio {
+  display: flex;
+  align-items: center;
+}
+.order__block--radio .order__input {
+  width: auto;
+}
 .order__input {
   width: 100%;
   padding: 8px 21px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 4px;
+}
+.order__input:focus {
+  outline: none;
+  border: 2px solid #f9b43b;
+}
+.order textarea {
+  resize: vertical;
+}
+.order__fake-button {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+.order__fake-button:before {
+  content: " ";
+  display: flex;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: #e1942a;
+}
+
+.order__block--radio .order__input:checked + .order__fake-button:before {
+  width: 7px;
+  height: 7px;
 }
 
 .container--order {
   flex-wrap: wrap;
   align-content: center;
+}
+
+.menu-section {
+  min-height: 100%;
+  background-color: white;
+  background-image: url("/img/bg-menu.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  color: white;
+}
+.menu-section .title {
+  color: white;
+}
+.menu-section__wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 70%;
+}
+.menu-section__title-container {
+  min-height: 80px;
+  background-image: url("/img/bg-menu-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.menu-section__title {
+  font-size: 40px;
+  padding: 0 40px;
+}
+
+.contacts {
+  background-image: url("/img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+
+.map__marker {
+  position: absolute;
+}
+.map__marker--1 {
+  top: 25%;
+  left: 45%;
+}
+.map__marker--2 {
+  top: 40%;
+  left: 59%;
+}
+.map__marker--3 {
+  top: 71%;
+  left: 46%;
+}
+.map__marker--4 {
+  top: 56%;
+  left: 79%;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  display: flex;
+  padding: 10px 0;
+  background-color: #2f3234;
+}
+.footer:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url("/img/bg-footer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+.footer .container {
+  z-index: 100;
+}
+.footer__svg {
+  margin-right: 5px;
+}
+.footer__right, .footer__left {
+  flex: 1 1 50%;
+}
+.footer__address {
+  font-weight: lighter;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer__number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e45028;
+  fill: #e45028;
+  display: flex;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+}
+.socials__list {
+  display: flex;
+}
+.socials__item {
+  margin-right: 20px;
+}
+.socials__item:last-child {
+  margin-right: 0px;
+}
+.socials__link {
+  display: block;
+}
+.socials__svg {
+  opacity: 0.5;
+  fill: white;
+  transition: all 0.3s;
+}
+.socials__svg:hover {
+  opacity: 1;
 }

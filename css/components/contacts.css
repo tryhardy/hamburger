@@ -1,0 +1,7 @@
+.contacts {
+  background-image: url("/img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}

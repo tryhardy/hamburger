@@ -3,6 +3,7 @@
 @import './settings/mixins';
 @import './settings/fonts';
 @import './settings/base';
+@import './settings/svg.scss';
 
 
 //components
@@ -15,3 +16,8 @@
 @import './components/review';
 @import './components/buttons';
 @import './components/order';
+@import './components/menu';
+@import './components/contacts';
+@import './components/footer';
+@import './components/socials';
+@import './components/map';

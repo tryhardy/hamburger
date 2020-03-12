@@ -1,0 +1,37 @@
+.menu-section {
+    min-height: $section-height;
+    background-color: white;
+    background-image: url('/img/bg-menu.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    @include theme($dark-theme: true);
+
+    .title {
+        color: white;
+    }
+
+    &__wrapper {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        max-width: 70%;
+    }
+
+    &__title-container {
+        min-height: 80px;
+        background-image: url('/img/bg-menu-1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 40px;
+        padding: 0 40px;
+    }
+}
