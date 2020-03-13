@@ -763,10 +763,9 @@ table {
   right: 0;
   top: 0;
   bottom: 0;
-  max-width: 70%;
 }
 .menu-section__title-container {
-  min-height: 80px;
+  max-width: 80px;
   background-image: url("/img/bg-menu-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -777,6 +776,20 @@ table {
 .menu-section__title {
   font-size: 40px;
   padding: 0 40px;
+  transform: rotate(-90deg);
+}
+.menu-section__list {
+  display: flex;
+  height: 100%;
+}
+.menu-section__item {
+  display: flex;
+}
+.menu-section__item--active .menu-section__text {
+  width: 60%;
+}
+.menu-section__text {
+  width: 0px;
 }
 
 .contacts {
