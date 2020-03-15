@@ -10,6 +10,7 @@
 .map {
     &__marker {
         position: absolute;
+        width: rem(100px);
 
         &--1 {
             top: 25%;

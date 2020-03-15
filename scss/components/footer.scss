@@ -4,7 +4,7 @@
     bottom: 0;
     color: white;
     display: flex;
-    padding: 10px 0;
+    padding: rem(10px) 0;
     background-color: #2f3234;
 
     &:after {
@@ -25,18 +25,29 @@
     }
 
     &__svg {
-        margin-right: 5px;
+        margin-right: rem(5px);
     }
 
     &__right, 
     &__left {
         flex: 1 1 50%;
+
+        @include mobile {
+            flex: auto;
+            text-align: center;
+            margin-bottom: 15px;
+
+        }
     }
 
     &__address {
         font-weight: lighter;
-        font-size: 14px;
-        margin-bottom: 10px;
+        font-size: rem(14px);
+        margin-bottom: rem(10px);
+
+        @include mobile {
+            margin-bottom: 0;
+        }
     }
 
     &__phone {
@@ -44,10 +55,14 @@
     }
 
     &__number {
-        font-size: 14px;
+        font-size: rem(14px);
         font-weight: bold;
         color: $orange;
         fill: $orange;
         display: flex;
+
+        @include mobile {
+            justify-content: center;
+        }
     }
 }

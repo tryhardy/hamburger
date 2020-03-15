@@ -1,67 +1,87 @@
 .review {
-    background-color: #000;
-    @include theme($dark-theme: true);
+  background-color: #000;
+  @include theme($dark-theme: true);
   
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    height: 100%;
+  }
+  
+  &__item {
+    flex: 1 1 25%;
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+
+    @include tablets {
+      flex: 1 1 50%;
+      height: 25%;
+    }
+
+    &:hover .review__content {
+      opacity: 1;
+      left: 0;
+    }
+
+    &--active .review__content {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+
+  &__content {
+    padding: rem(20px);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    transition: all 0.3s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablets {
+      text-align: center;
+    }
+  }
+  
+  &__photo {
+    overflow: hidden;
+    height: 100%;
+
+    img {
+      display: block;
       height: 100%;
-    }
-  
-    &__item {
-      flex: 1 1 25%;
-      position: relative;
-      overflow: hidden;
-      height: 50%;
-  
-      &:hover .review__content {
-        opacity: 1;
-        left: 0;
-      }
-  
-      &--active .review__content {
-        opacity: 1;
-        left: 0;
-      }
-    }
-
-
-    &__content {
-      padding: 20px;
-      position: absolute;
-      top: 0;
-      left: -100%;
       width: 100%;
-      height: 100%;
-      background-color: #00000080;
-      transition: all 0.3s;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      object-fit: cover;
     }
-  
-    &__photo {
-      overflow: hidden;
-      height: 100%;
+  }
 
-      img {
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+  &__title {
+    margin-bottom: rem(20px);
+
+    @include desc__text;
+      margin-bottom: rem(10px);
+  }
+
+  &__text {
+    @include desc__text;
+    margin-bottom: rem(20px);
+
+    @include tablets {
+      margin-bottom: 0;
     }
-  
-    &__title {
-      margin-bottom: 20px;
+
+    @include mobile {
+      display: none;
     }
-  
-    &__text {
-      @include desc__text;
-      margin-bottom: 20px;
-    }
+  }
 
   }
   

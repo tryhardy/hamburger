@@ -1,4 +1,8 @@
 .btn {
+  
+  @include tablets {
+    margin-top: 20px;
+  }
     
     &__link {
       font-size: 1rem;
@@ -6,11 +10,15 @@
       font-weight: 500;
       background-color: $orange;
       color: inherit;
-      padding: 12px 15px;
-      border-radius: 4px;
+      padding: rem(12px) rem(15px);
+      border-radius: rem(4px);
       transition: all 0.3s;
       border: none;
       color: white;
+
+      &:focus {
+        outline: none;
+      }
   
       &:hover {
         background-color: #c1401e;

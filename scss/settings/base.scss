@@ -9,6 +9,14 @@ body {
     position: relative;
     font-weight: lighter;
     line-height: 1.7;
+
+    @include tablets {
+        font-size: 14px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+    }
 }
 
 * {
@@ -49,7 +57,7 @@ h6 {
   
 .section {
     height: 100vh;
-    min-width: 650px;
+//    min-width: rem(650px);
     position: relative;
     display: flex;
 }
@@ -107,7 +115,7 @@ table {
 
 .container {
     width: 95%;
-    max-width: $container;
+    max-width: rem(940px);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -139,20 +147,25 @@ table {
 
 .title {
     font-family: $font-titleh2;
-    font-size: 72px;
+    font-size: 4rem;
     color: $light-orange;
+    line-height: normal;
   
     &--advantages {
-      margin-bottom: 45px;
+      margin-bottom: rem(45px);
       color: $dark-gray;
     }
 
     &--order {
-        margin-bottom: 40px;
+        margin-bottom: rem(40px);
     }
 
     &--team {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: rem(50px);
+    }
+
+    @include tablets {
+        text-align: center;
     }
 }

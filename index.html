@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mr. Burger</title>
 
     <link rel="stylesheet" href="/css/main.css">
@@ -53,14 +53,22 @@
                         <button class="btn__link">Заказать</button>
                     </div>
                 </div>
+                <div class="hamburger-menu">
+                    <a class="hamburger-menu-link" href="">
+                        <div class="hamburger-menu-link__bars"></div>
+                    </a>
+                </div>
             </div>
         </header>
         <div class="maincontent">
             <section id="about" class="section about">
+                <video autoplay loop muted class="video-bg">
+                    <source src="images/video/burger" type="video, mp4">
+                </video>
                 <div class="container container--about">
                     <div class="about__content">
                         <div class="about__image">
-                            <img src="img/burger.png">
+                            <img class="about__photo" src="img/burger.png">
                         </div>
                         <div class="about__desc">
                             <h2 class="title">
@@ -105,7 +113,7 @@
                         </li>
                         <li class="advantages__item">
                             <div class="advantages__icon icon-hand">
-                                <svg preserveAspectRatio="xMinYMid meet" class="advantages__svg" width="100" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <svg class="advantages__svg" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" viewBox="-15 0 100 100">
                                     <use xlink:href="/icons/sprite.svg#hand"></use>
                                 </svg>
                                 
@@ -120,12 +128,13 @@
                             </div>
                         </li>
                         <li class="advantages__item">
+                            <div class="advantages__icon icon-natural">
+                                <svg preserveAspectRatio="xMinYMid meet" class="advantages__svg" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                    <use xlink:href="/icons/sprite.svg#natural"></use>
+                                </svg>
+                            </div>
                             <div class="advantages__content">
-                                <div class="advantages__icon icon-natural">
-                                    <svg preserveAspectRatio="xMinYMid meet" class="advantages__svg" width="100" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                        <use xlink:href="/icons/sprite.svg#natural"></use>
-                                    </svg>
-                                </div>
+                                
                                 <h3 class="advantages__title">
                                     Натуральные ингредиенты
                                 </h3>
@@ -404,7 +413,7 @@
                                 <label class="order__block order__block--checkbox">
                                     <input class="order__input" type="checkbox" name="checkbox" value="Не перезванивать">
                                     <span class="order__fake-button"></span>
-                                    <span class="order__title">Потребуется сдача</span>
+                                    <span class="order__title">Не перезванивать</span>
                                 </label>
                             </div>
 
@@ -429,17 +438,17 @@
                         </svg>
                     </div>
                     <div class="map__marker map__marker--2">
-                        <svg class="arrow-down__svg" viewBox="0 0 100 100">
+                        <svg class="arrow-down__svg" width="100%" viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>
                     <div class="map__marker map__marker--3">
-                        <svg class="arrow-down__svg" viewBox="0 0 100 100">
+                        <svg class="arrow-down__svg" width="100%" viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>
                     <div class="map__marker map__marker--4">
-                        <svg class="arrow-down__svg" viewBox="0 0 100 100">
+                        <svg class="arrow-down__svg" width="100%"viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>
