@@ -15,7 +15,7 @@
                     <div class="logo">
                         <a class="logo__link" href="index.html">
 
-                            <svg preserveAspectRatio="xMinYMid meet" class="logo__svg" width="80" height="60" xmlns="http://www.w3.org/2000/svg" id="logo" viewBox="0 0 100 80">
+                            <svg class="logo__svg" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" id="logo" viewBox="0 0 100 80">
                                 <use xlink:href="/icons/sprite.svg#logo"></use>
                             </svg>
                         </a>
@@ -90,7 +90,7 @@
                     <ul class="advantages__list">
                         <li class="advantages__item">
                             <div class="advantages__icon icon-meat">
-                                <svg preserveAspectRatio="xMinYMid meet" class="advantages__svg" width="100" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <svg class="advantages__svg" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                                     <use xlink:href="/icons/sprite.svg#meat"></use>
                                 </svg>
                             </div>
@@ -193,13 +193,13 @@
                 </div>
             </section>
             <section id="menu" class="section menu-section">
-                <h2 class="title">
+                <h2 class="title title--menu-section">
                     Меню
                 </h2>
                 <div class="menu-section__wrapper">
                     <ul class="menu-section__list">
                         <li class="menu-section__item menu-section__item--active">
-                            <div class="menu-section__title-container">
+                            <div class="menu-section__title-container menu-section__title-container--1">
                                 <h4 class="menu-section__title">
                                     Для мясоедов
                                 </h4>
@@ -210,7 +210,7 @@
                             </p>
                         </li>
                         <li class="menu-section__item">
-                            <div class="menu-section__title-container">
+                            <div class="menu-section__title-container menu-section__title-container--2">
                                 <h4 class="menu-section__title">
                                     Вегетерианское
                                 </h4>
@@ -222,7 +222,7 @@
                             </p>
                         </li>
                         <li class="menu-section__item">
-                            <div class="menu-section__title-container">
+                            <div class="menu-section__title-container menu-section__title-container--3">
                                 <h4 class="menu-section__title">
                                     Диетическое
                                 </h4>
@@ -387,7 +387,7 @@
                                 </label>
                             </div>
                             <div class="order__row">
-                                <label for="radiobutton"></label>
+
                                 <label class="order__block order__block--radio">
                                     <input class="order__input" type="radio" id="radiobutton" name="radiobutton" value="Потребуется сдача" checked>
                                     <span class="order__fake-button"></span>
@@ -399,6 +399,23 @@
                                     <span class="order__title">Оплата по карте</span>
                                 </label>
                             </div>
+
+                            <div class="order__row">
+                                <label class="order__block order__block--checkbox">
+                                    <input class="order__input" type="checkbox" name="checkbox" value="Не перезванивать">
+                                    <span class="order__fake-button"></span>
+                                    <span class="order__title">Потребуется сдача</span>
+                                </label>
+                            </div>
+
+                            <div class="order__row">
+                                <div class="btn">
+                                    <button class="btn__link">Заказать</button>
+                                </div>
+                                <div class="btn btn--clear">
+                                    <button type="reset" class="btn__link">Очистить</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -407,22 +424,22 @@
             <section id="contacts" class="section contacts">
                 <div class="map">
                     <div class="map__marker map__marker--1">
-                        <svg preserveAspectRatio="xMinYMid meet" class="arrow-down__svg" width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="-6 0 60 60">
+                        <svg class="arrow-down__svg" width="100%" viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>
                     <div class="map__marker map__marker--2">
-                        <svg preserveAspectRatio="xMinYMid meet" class="arrow-down__svg" width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="-6 0 60 60">
+                        <svg class="arrow-down__svg" viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>
                     <div class="map__marker map__marker--3">
-                        <svg preserveAspectRatio="xMinYMid meet" class="arrow-down__svg" width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="-6 0 60 60">
+                        <svg class="arrow-down__svg" viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>
                     <div class="map__marker map__marker--4">
-                        <svg preserveAspectRatio="xMinYMid meet" class="arrow-down__svg" width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="-6 0 60 60">
+                        <svg class="arrow-down__svg" viewBox="0 0 100 100">
                             <use xlink:href="/icons/sprite.svg#map-marker"></use>
                         </svg>
                     </div>

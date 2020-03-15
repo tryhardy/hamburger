@@ -1,7 +1,7 @@
 .btn {
     
     &__link {
-      font-size: $normal-fsize;
+      font-size: 1rem;
       text-transform: uppercase;
       font-weight: 500;
       background-color: $orange;
@@ -14,13 +14,26 @@
   
       &:hover {
         background-color: #c1401e;
+        cursor: pointer;
       }
+    }
+
+    &--clear {
+      button {
+        background-color: transparent;
+        text-transform: none;
+        font-weight: normal;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      
     }
   
 }
 
 .btn--black {
-
   .btn__link {
     background-color: #2f3234;
     

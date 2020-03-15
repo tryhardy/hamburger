@@ -1,0 +1,26 @@
+.btn__link {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: #e45028;
+  color: inherit;
+  padding: 12px 15px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: none;
+  color: white;
+}
+.btn__link:hover {
+  background-color: #c1401e;
+}
+.btn--clear {
+  background-color: transparent;
+  text-transform: none;
+}
+
+.btn--black .btn__link {
+  background-color: #2f3234;
+}
+.btn--black .btn__link:hover {
+  background-color: #1f2122;
+}
