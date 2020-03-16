@@ -22,6 +22,10 @@
 
     .container {
         z-index: 100;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__svg {

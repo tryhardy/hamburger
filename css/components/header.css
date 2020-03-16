@@ -17,3 +17,7 @@
   display: block;
   width: rem(100px);
 }
+
+.header__right .btn {
+  margin-top: 0;
+}

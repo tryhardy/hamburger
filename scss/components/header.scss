@@ -15,3 +15,13 @@
     display: block;
     width: rem(100px);
   }
+
+  .header__right {
+    .btn {
+      margin-top: 0;
+
+      @include tablets {
+        margin-right: rem(20px);
+      }
+    }
+  }

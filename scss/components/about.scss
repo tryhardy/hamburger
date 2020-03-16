@@ -64,15 +64,19 @@
       @include tablets {
         padding: 0;
         flex: 0;
-        max-height: 50%;
+        height: 50%;
         min-width: 60%;
+        display: flex;
+        background-position: center;
       }
     }
 
     &__photo {
       width: auto;
-      max-width: 100%;
       max-height: 100%;
+      display: block;
+      margin: auto;
+      max-width: 100%;
     }
 
   &__arrow-down {
