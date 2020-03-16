@@ -1211,10 +1211,15 @@ table {
 .hamburger-menu {
   width: 30px;
   height: 30px;
-  display: flex;
   align-items: center;
   overflow: hidden;
   transition: all 1s;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
 }
 .hamburger-menu:hover .hamburger-menu__link:after {
   transform: rotate(-45deg);

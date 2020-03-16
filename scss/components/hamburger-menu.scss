@@ -1,10 +1,14 @@
 .hamburger-menu {
 	width: 30px;
 	height: 30px;
-	display: flex;
 	align-items: center;
 	overflow: hidden;
 	transition: all 1s;
+	display: none;
+
+	@include tablets {
+		display: flex;
+	}
 
 	&:hover {
 		.hamburger-menu__link:after {
