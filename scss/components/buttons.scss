@@ -2,6 +2,8 @@
   
   @include tablets {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
   }
     
     &__link {
@@ -15,6 +17,8 @@
       transition: all 0.3s;
       border: none;
       color: white;
+      display: block;
+      line-height: 1;
 
       &:focus {
         outline: none;
@@ -37,6 +41,20 @@
         }
       }
       
+    }
+
+    &__text-d {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &__text-m {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
     }
   
 }

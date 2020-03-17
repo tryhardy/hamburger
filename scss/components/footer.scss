@@ -28,6 +28,11 @@
         }
     }
 
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
+
     &__svg {
         margin-right: rem(5px);
     }

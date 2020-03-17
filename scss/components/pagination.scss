@@ -3,6 +3,10 @@
     position: fixed;
     top: 20%;
     right: 5%;
+
+    @include tablets {
+      display: none;
+    }
   
     &__item {
       padding-bottom: rem(20px);

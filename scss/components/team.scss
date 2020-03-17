@@ -45,25 +45,14 @@
       justify-content: center;
     }
 
-    &:before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      background-image: url('/icons/arrow.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transform: rotate(180deg);
-      margin-right: 10px;
-
-    }
+    
 
     &--active {
       .team__name {
         color: $light-orange;
       }
 
-      &:before {
+      .team__name:before {
         transform: rotate(0deg);
       }
 
@@ -89,6 +78,20 @@
 
   &__name {
     width: 95%;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-image: url(/icons/arrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: rotate(180deg);
+      margin-right: 10px;
+    }
 
     @include tablets {
       width: auto;
