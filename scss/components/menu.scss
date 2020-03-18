@@ -80,6 +80,12 @@
 
         &--active {
 
+            .close-btn {
+                @include mobile {
+                    display: block;
+                }
+            }
+
             @include tablets {
                 position: absolute;
                 width: 100%;
@@ -97,7 +103,7 @@
                 max-width: rem(540px);
 
                 @include tablets {
-                    padding: rem(20px) rem(20px);
+                    padding: rem(80px) rem(40px);
                 }
             }
 
@@ -110,6 +116,7 @@
     &__text {
         width: rem(0px);
         background-color: #0000008f;
+        position: relative;
     }
 
 }
