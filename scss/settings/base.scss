@@ -19,6 +19,11 @@ body {
     }
 }
 
+.body--active {
+    height: 100vh;
+    overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -162,6 +167,11 @@ table {
 
     &--team {
         width: 100%;
+        margin-bottom: rem(50px);
+    }
+
+    &--slider {
+        color: white;
         margin-bottom: rem(50px);
     }
 
