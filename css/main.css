@@ -336,6 +336,9 @@ table {
   display: flex;
   flex: 1;
 }
+.container--slider {
+  flex-wrap: nowrap;
+}
 
 .title {
   font-family: "Gagalin", sans-serif;
@@ -411,12 +414,11 @@ table {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    left: 100%;
     position: fixed;
     background-color: #2f3234;
     z-index: 99999;
-    opacity: 0;
-    transition: all 0.3s;
+    transition: 0.3s;
   }
 }
 .primary-menu__list {
@@ -455,9 +457,23 @@ table {
 }
 
 .primary-menu--active {
-  opacity: 1;
+  left: 0;
 }
 
+.primary-menu--animated-close {
+  animation: opacity 0.3s forwards;
+}
+
+@keyframes opacity {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .about {
   min-height: 100%;
   background-image: url("/img/video-bg.png");
@@ -1507,6 +1523,8 @@ table {
 }
 .slider__btn {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #e4502863;
@@ -1515,6 +1533,10 @@ table {
   height: 6.4285714286rem;
   border-radius: 10%;
   transition: all 0.3s;
+}
+.slider__btn-desc {
+  font-family: "Gagalin", sans-serif;
+  font-size: 1rem;
 }
 .slider .slider__composition-list {
   width: 20rem;
@@ -1529,6 +1551,7 @@ table {
   flex-wrap: wrap;
   color: black;
   z-index: 9999;
+  visibility: hidden;
 }
 @media screen and (max-width: 768px) {
   .slider .slider__composition-list {
@@ -1607,6 +1630,7 @@ table {
   display: flex;
   transition: all 0.3s;
   opacity: 1;
+  visibility: visible;
 }
 .slider__burger-menu:hover .slider__btn {
   cursor: pointer;
@@ -1664,6 +1688,7 @@ table {
 }
 .slider__arrow {
   width: 25%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
