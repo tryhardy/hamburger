@@ -913,6 +913,9 @@ table {
     justify-content: center;
   }
 }
+.order__error {
+  color: red;
+}
 .order__block {
   flex: 1;
   margin-right: 1.4285714286rem;
@@ -1448,16 +1451,15 @@ table {
 .slider__list {
   display: flex;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .slider__list {
     max-width: 100%;
-    padding: 1.4285714286rem;
   }
 }
 @media screen and (max-width: 480px) {
   .slider__list {
-    padding: 1rem;
     max-width: 100%;
   }
 }
@@ -1465,6 +1467,8 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 100%;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .slider__item {
@@ -1478,12 +1482,11 @@ table {
 }
 .slider__picture {
   display: flex;
-  position: relative;
   flex: 1 1 50%;
 }
 @media screen and (max-width: 768px) {
   .slider__picture {
-    height: 45%;
+    height: auto;
     align-items: flex-end;
     justify-content: center;
   }
@@ -1497,7 +1500,7 @@ table {
   position: absolute;
   width: 60px;
   height: 60px;
-  bottom: -60px;
+  bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .slider__kkal {
@@ -1612,7 +1615,7 @@ table {
 }
 .slider__burger-menu {
   position: absolute;
-  top: -6.4285714286rem;
+  top: 0;
   transition: all 0.3s;
   width: 6.4285714286rem;
   height: 6.4285714286rem;
@@ -1655,7 +1658,6 @@ table {
 }
 @media screen and (max-width: 768px) {
   .slider__content {
-    height: 50%;
     text-align: center;
   }
 }
@@ -1672,6 +1674,14 @@ table {
     justify-content: center;
   }
 }
+.slider__carousel {
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
 .slider__price, .slider__currency {
   font-family: "Gagalin", sans-serif;
   color: #e45028;
@@ -1686,9 +1696,13 @@ table {
   font-size: 2.1428571429rem;
   margin-right: 2rem;
 }
+.slider__wrap {
+  flex: 1;
+  overflow: hidden;
+}
 .slider__arrow {
-  width: 25%;
-  height: 100%;
+  width: 10%;
+  height: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
