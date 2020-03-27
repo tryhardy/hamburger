@@ -14,7 +14,6 @@
   &__list {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
 
     @include tablets {
       max-width: 100%;
@@ -152,7 +151,7 @@
 
   &__composition-item {
     display: flex;
-    margin: 1rem 2rem 1rem 1rem;
+    margin: .8rem 2rem .8rem 1rem;
     align-items: center;
     flex: 1 1 100%;
 

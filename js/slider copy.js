@@ -32,8 +32,11 @@ function Slider(selector, settings){
             });
         }
 
-        if (settings.loop == '1') {
-            loop('right');
+        if (settings.loop === '1') {
+
+            if (this.currentIndexSlide > this.countSlides) {
+                loop('right');
+            }
         }
     }
     
@@ -43,7 +46,9 @@ function Slider(selector, settings){
         if (arrow) {
             e.preventDefault();
             var vector = arrow.dataset.vector;
+            //console.log(vector);
             this[vector]();
+            loop(vector);
         } 
     });
 
@@ -69,23 +74,19 @@ function Slider(selector, settings){
     }
 
     function loop(direction) {
-       var children = list.children;
-        console.log(children);
+        var children = list.children;
+            console.log(children);
 
-        if (direction == 'right') {
+        if (direction === "right") {
             list.appendChild(list.firstElementChild);
-        }
-
-    //    if (direction === "right") {
-    //        list.appendChild(list.firstElementChild);
-    //        //this.countSlides+=1;
-    //    } else {
-    //        //list.insertBefore(list.lastElementChild, list.firstElementChild);
-    //        list.style.transition = null;
-     //       translateSlider(this.currentIndexSlide); 
-    //        var TEST = list.insertBefore(cildren.length, children[0]);
-    //        console.log(TEST);
-    //    } 
+            //this.countSlides+=1;
+        } else {
+            //list.insertBefore(list.lastElementChild, list.firstElementChild);
+            list.style.transition = null;
+            translateSlider(this.currentIndexSlide); 
+            var TEST = list.insertBefore(cildren.length, children[0]);
+            console.log(TEST);
+        } 
     }
 }
 
@@ -93,9 +94,9 @@ const sliderCarousel = new Slider('.slider__carousel', {
     animate: 'cubic-bezier(.17,.67,.62,.92)',
     duration: '.5s',
     keyControl: '1',
-    loop: '0',
+    loop: '1',
     //autoplay: '5000',
 });
 
-//console.log(sliderCarousel);
+console.log(sliderCarousel);
 
