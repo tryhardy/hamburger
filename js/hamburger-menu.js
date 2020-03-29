@@ -2,7 +2,7 @@ let hamburgerButton = document.querySelector("#hamburger-menu");
 let primaryMenu = document.querySelector(".primary-menu");
 let primaryMenuLink = document.querySelectorAll(".primary-menu__link");
 let bodyContainer = document.body;
-console.log(primaryMenuLink);
+//console.log(primaryMenuLink);
 
 hamburgerButton.addEventListener("click", function(e) {
   e.preventDefault();

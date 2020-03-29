@@ -1,6 +1,15 @@
 .review {
   background-color: #000;
   @include theme($dark-theme: true);
+
+  .close-btn {
+    right: 1.5rem;
+    top: 1rem;
+    &:before,
+    &:after {
+      background-color: $orange;
+    }
+  }
   
   &__list {
     display: flex;
@@ -14,6 +23,7 @@
     position: relative;
     overflow: hidden;
     height: 50%;
+    transition: opacity .3s;
 
     @include tablets {
       flex: 1 1 50%;
@@ -76,6 +86,7 @@
 
     @include tablets {
       margin-bottom: 0;
+      font-size: .9rem;
     }
 
     @include mobile {
@@ -83,5 +94,53 @@
     }
   }
 
-  }
+}
+
+.review__item--overlay {
+    .review__content {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #00000080;
+      z-index: 99999;
+      opacity: 1;
+      left: 0;
+      transition: opacity 1s;
+      display: flex;
+      align-items: center;
+    }
+
+    .review__container {
+      background-color: white;
+      color: #2f3234;
+      width: 50%;
+      padding: rem(30px);
+      border-radius: 8px;
+      position: relative;
+      text-align: left;
+
+      @include tablets {
+        width: 80%;
+      }
+
+      @include mobile {
+        width: 95%;
+      }
+    }
+
+    .review__text {
+      @include mobile {
+        display: block;
+      }
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .close-btn {
+      display: block;
+      top: rem(25px);
+    }
+}
   

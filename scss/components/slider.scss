@@ -30,6 +30,7 @@
     justify-content: center;
     flex: 0 0 100%;
     position: relative;
+    padding: 1rem;
 
     @include tablets {
       flex-wrap: wrap;
@@ -124,7 +125,7 @@
     visibility: hidden;
 
     @include tablets {
-      width: 40vh;
+      max-width: 40vh;
     }
 
     @include mobile {
@@ -203,6 +204,7 @@
         visibility: visible;
       }
 
+
       .slider__btn {
         cursor: pointer;
         background-color: $orange;
@@ -210,20 +212,18 @@
       }
     }
 
-    &--active {
+
+    .slider__btn--active {
+      cursor: pointer;
+      background-color: $orange;
       transition: all .3s;
+    }
 
-      .slider__composition-list {
-        display: flex;
-        transition: all .3s;
-        opacity: 1;
-      }
-
-      .slider__btn {
-        cursor: pointer;
-        background-color: $orange;
-        transition: all .3s;
-      }
+    .slider__composition-list--active {
+      display: flex;
+      transition: all .3s;
+      opacity: 1;
+      visibility: visible;
     }
 
   }
@@ -285,7 +285,7 @@
   }
 
   &__arrow {
-    width: 10%;
+    width: 5%;
     height: 20%;
     display: flex;
     align-items: center;

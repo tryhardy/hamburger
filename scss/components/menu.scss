@@ -36,6 +36,10 @@
         padding: rem(40px) rem(20px);
         position: relative;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &:after {
             content: "";
             position: absolute;
@@ -54,7 +58,7 @@
         }
 
         @include tablets {
-            padding: rem(40px) .5rem;
+            padding: rem(40px) 1.5rem;
         }
     }
 
@@ -75,32 +79,81 @@
         height: 100%;
     }
 
+    &__close-btn {
+        position: absolute;
+        right: rem(10px);
+        top: rem(20px);
+        border: none;
+        width: 30px;
+        height: 30px;
+        transition: all .3s;
+        display: none;
+        opacity: 0.5;
+    
+      
+      &:hover {
+        opacity: 1;
+      }
+      
+      &:before {
+        content: "";
+        background-color: white;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 40%;
+        transform: rotate(45deg);
+        transition: all .3s;
+        border-radius: 4px;
+      }
+      
+      &:after {
+        content: "";
+        background-color: white;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 40%;
+        transform: rotate(-45deg);
+        transition: all .3s;
+        border-radius: 4px;
+      }
+    }
+        
+
     &__item {
         display: flex;
+        width: 5.5rem;
+        transition: all .3s;
+
+        @include tablets {
+            width: 4.5rem;
+        }
 
         &--active {
+            width: 40rem;
+            transition: all 0.3s;
 
-            .close-btn {
-                @include mobile {
+            .menu-section__close-btn {
+                @include tablets {
                     display: block;
                 }
             }
 
             @include tablets {
                 position: absolute;
-                width: 100%;
                 height: 100%;
                 top: 0;
                 right: 0;
                 display: flex;
                 justify-content: flex-end;
                 z-index: 99999;
+                max-width: 100%;
             }
 
             .menu-section__text {
-                width: 100%;
                 padding: rem(60px) rem(35px);
-                max-width: rem(540px);
+                overflow: hidden;
 
                 @include tablets {
                     padding: rem(80px) rem(40px);
@@ -114,9 +167,10 @@
     }
 
     &__text {
-        width: rem(0px);
         background-color: #0000008f;
         position: relative;
+        overflow: hidden;
+        width: 100%;
     }
 
 }
