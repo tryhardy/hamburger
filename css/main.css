@@ -1828,7 +1828,8 @@ table {
   .slider__arrow {
     position: absolute;
     width: 10%;
-    height: 100%;
+    height: 20%;
+    z-index: 9999;
   }
 }
 .slider__arrow--left .arrow-down__svg {
