@@ -14,6 +14,7 @@
   &__list {
     display: flex;
     flex-wrap: nowrap;
+    position: relative;
 
     @include tablets {
       max-width: 100%;
@@ -37,7 +38,7 @@
     }
 
     @include mobile {
-      padding: rem(60px) 0;
+      padding: rem(60px) 1rem;
     }
   }
 
@@ -318,5 +319,38 @@
         right: 0;
       }
     }    
+  }
+}
+
+.slider__dots {
+  position: absolute;
+  bottom: -15%;
+  display: flex;
+  
+
+  .slider__dot-item {
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:hover .slider__dot-circle {
+      opacity: 1;
+    }
+
+    &--active .slider__dot-circle {
+      opacity: 1;
+    }
+  }
+
+  .slider__dot-circle {
+    display: block;
+    width: rem(15px);
+    height: rem(15px);
+    background-color: white;
+    border-radius: 50%;
+    opacity: .5;
+    transition: all .3s;
   }
 }

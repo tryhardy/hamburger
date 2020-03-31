@@ -14,8 +14,8 @@ hamburgerButton.addEventListener("click", function(e) {
 
 for( let i = 0; i < primaryMenuLink.length; i++) {
   primaryMenuLink[i].addEventListener("click", function(e) {
-    hamburgerButton.classList.toggle("hamburger-menu--active");
-    primaryMenu.classList.toggle("primary-menu--active");
-    bodyContainer.classList.toggle("body--active");
+    hamburgerButton.classList.remove("hamburger-menu--active");
+    primaryMenu.classList.remove("primary-menu--active");
+    bodyContainer.classList.remove("body--active");
   });
 }

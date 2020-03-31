@@ -13,7 +13,7 @@
   
       &--active {
   
-        a:after {
+        div:after {
           content: "";
           position: absolute;
           border: 1px solid white;
@@ -27,7 +27,7 @@
       }
     }
   
-    &__link {
+    &__circle {
       width: 6px;
       height: 6px;
       display: block;
