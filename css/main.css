@@ -905,7 +905,7 @@ table {
 .review__item--overlay .review__container {
   background-color: white;
   color: #2f3234;
-  width: 50%;
+  width: 40rem;
   padding: 2.1428571429rem;
   border-radius: 8px;
   position: relative;
@@ -1209,34 +1209,48 @@ table {
     width: 4.5rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .menu-section__item {
+    transition: opacity 0.3s;
+  }
+}
 .menu-section__item--active {
   width: 40rem;
   transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .menu-section__item--active {
+    width: 30rem;
+    z-index: 99999;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu-section__item--active {
+    z-index: 99999;
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.3s;
+  }
 }
 @media screen and (max-width: 768px) {
   .menu-section__item--active .menu-section__close-btn {
     display: block;
   }
 }
-@media screen and (max-width: 768px) {
-  .menu-section__item--active {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-    z-index: 99999;
-    max-width: 100%;
-  }
-}
 .menu-section__item--active .menu-section__text {
-  padding: 4.2857142857rem 2.5rem;
   overflow: hidden;
+  opacity: 1;
 }
 @media screen and (max-width: 768px) {
   .menu-section__item--active .menu-section__text {
-    padding: 5.7142857143rem 2.8571428571rem;
+    min-width: 25rem;
   }
 }
 .menu-section__item--active .menu-section__title-container {
@@ -1247,6 +1261,13 @@ table {
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-width: 35rem;
+  padding: 4.2857142857rem 2.5rem;
+  opacity: 0;
+  transition: all 0.2s;
+  /*@include tablets {
+      padding: rem(80px) rem(40px);
+  }*/
 }
 
 .title--menu-section {

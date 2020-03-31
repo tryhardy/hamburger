@@ -1,5 +1,6 @@
 let formOrder = document.querySelector('#form-order');
 const submitBtn = formOrder.querySelector('#submit');
+const resetBtn = formOrder.querySelector('#reset');
 
 const template = document.querySelector("#overlayTemplate").innerHTML;
 const overlay = createOverlay(template);
@@ -33,10 +34,11 @@ submitBtn.addEventListener('click', (e) => {
 
         xhr.addEventListener('load', () => {
                 if(xhr.response) {
-                    console.log(xhr.response.message);
+                    //console.log(xhr.response.message);
 
                     overlay.open();
-                    overlay.setContent("Сообщение отправлено");
+                    overlay.setContent(xhr.response.message);
+                    resetBtn.click();
                 }
 
             
