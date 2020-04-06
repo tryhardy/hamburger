@@ -9,7 +9,6 @@ body {
     position: relative;
     font-weight: lighter;
     line-height: 1.7;
-    overflow: hidden;
 
     @include tablets {
         font-size: 14px;

@@ -1,4 +1,4 @@
-let reviews = document.querySelector(".review__list").children;
+/*let reviews = document.querySelector(".review__list").children;
 
 for(i=0; i<reviews.length; i++) {
 
@@ -22,4 +22,4 @@ for(i=0; i<reviews.length; i++) {
       closeBtn.click();
     }
   });
-}
+}*/

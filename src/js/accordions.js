@@ -45,7 +45,7 @@
     var acc= new Accordion(".team__list", 'team__item--active');
     var vertMenu= new Accordion(".menu-section__list", 'menu-section__item--active');
     
-}());
+})()
 
 
     

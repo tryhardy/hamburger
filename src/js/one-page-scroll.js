@@ -1,5 +1,4 @@
-(function () {
-  $(document).ready(function() {
+$(document).ready(function() {
 
     const sections = $(".section");
     const display = $(".maincontent");
@@ -9,8 +8,8 @@
   
     let inScroll = false;
   
-    //let md = new MobileDetect(window.navigator.userAgent);
-    //let isMobile = md.Mobile(); 
+    let md = new MobileDetect(window.navigator.userAgent);
+    let isMobile = md.mobile(); 
   
     var generateDots = function (){
       $(".section").each(function (){
@@ -102,7 +101,7 @@
       const tagName = e.target.tagName.toLowerCase();
       const userTypingInInputs = tagName === "input" || tagName === "textarea";
   
-      if (userTypingInInputs) {
+      if (!userTypingInInputs) {
         switch (e.keyCode) {
           case 38:
             scrollSection("prev");
@@ -132,7 +131,7 @@
       performTransition(target);
     });
   
-    //if (isMobile) {
+    if (isMobile) {
       $("body").swipe({
         swipe: (event, direction) => {
           let scrollDirection;
@@ -146,10 +145,9 @@
           scrollSection(scrollDirection);
         }
       });
-    //} 
+    }
      
-  });
-}());
+});
 
 
 

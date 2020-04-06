@@ -20,4 +20,4 @@
       bodyContainer.classList.remove("body--active");
     });
   }
-}());
+})()

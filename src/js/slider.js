@@ -1,3 +1,4 @@
+
 var coloringDots = function(index) {
   $('.slider__carousel')
     .find('.slider__dot-item')

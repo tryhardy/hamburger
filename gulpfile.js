@@ -39,9 +39,7 @@ task(
 ]*/
 
 task("styles", () => {
-    return src([
-      ...STYLES_LIBS
-    ])
+    return src(['src/styles/main.scss'])
     .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
@@ -113,6 +111,13 @@ task(
 )
 
 task(
+  "copySvg", () => {
+    return src(`${SRC_PATH}/icons/single/*`)
+    .pipe(dest(`${DIST_PATH}/icons/`))
+  }
+)
+
+task(
   "server", () => {
   browserSync.init({
       server: {
@@ -130,16 +135,17 @@ task(
   watch(`./${SRC_PATH}/icons/*.svg`, series("icons"));
   watch(`./${SRC_PATH}/fonts/*`, series("fonts"));
   watch(`./${SRC_PATH}/img/*`, series("img"));
+  watch(`./${SRC_PATH}/icons/*`, series("copySvg"));
 })
 
 task(
   "default", 
   series("clean", 
-  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img"), 
+  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img", "copySvg"), 
   parallel("server", "watch"))
 );
 
 task("build", 
   series("clean", 
-  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img"))
+  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img", "copySvg"))
 );
