@@ -1,25 +1,51 @@
-/*let reviews = document.querySelector(".review__list").children;
+(function(){
+  const wrapper = document.querySelector(".wrapper");
+  const template = document.querySelector("#overlayReviews").innerHTML;
+  const reviewList = document.querySelector(".review__list");
+  let openButtons = reviewList.querySelectorAll(".btn__link");
+  const overlay = createOverlay(template);
 
-for(i=0; i<reviews.length; i++) {
-
-  let currentItem = reviews[i];
-  let btn = currentItem.querySelector(".btn__link");
-  let closeBtn = currentItem.querySelector(".close-btn");
-  let overlayElement = currentItem.querySelector(".review__content");
+  for (i=0; i < openButtons.length; i++) {
+    openButtons[i].addEventListener("click", function(e) {
+      let target = e.currentTarget;
+      let parent = target.closest(".review__content");
+      let content = parent.querySelector(".review__text").innerHTML;
+      overlay.open();
+      overlay.setContent(content);
+    });
+  }
   
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    currentItem.classList.add("review__item--overlay");
-  });
-
-  closeBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    reviews[i].classList.remove("review__item--overlay");
-  });
-
-  overlayElement.addEventListener("click", function(e) {
-    if (e.target === overlayElement) {
-      closeBtn.click();
-    }
-  });
-}*/
+  
+  function createOverlay(template) {
+    const fragment = document.createElement('div');
+  
+    fragment.innerHTML = template;
+  
+    const overlayElement = fragment.querySelector(".review__overlay");
+    const contentElement = fragment.querySelector(".review__desc");
+    const closeElement = fragment.querySelector(".close-btn");
+    
+    overlayElement.addEventListener("click", e => {
+      if (e.target === overlayElement) {
+        closeElement.click();
+      }
+    });
+    closeElement.addEventListener("click", () => {
+      wrapper.removeChild(overlayElement);
+    });
+  
+    return {
+      open() {
+        wrapper.appendChild(overlayElement);
+      },
+      close() {
+        closeElement.click();
+      },
+      setContent(content) {
+        contentElement.innerHTML = content;
+      }
+    };
+  }
+  
+  
+})()

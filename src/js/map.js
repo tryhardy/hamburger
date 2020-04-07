@@ -11,6 +11,12 @@ const init = () => {
     [59.937999, 30.377596]
   ];
 
+  const baloons = [
+    'Уютная кафешка на Тверской, 23',
+    'Ждем вас в кафе на Нарвской, 42',
+    'Вкусные ланчи и ароматный кофе на Ленинском, 22',
+  ]
+
   const myCollection = new ymaps.GeoObjectCollection({}, {
     iconLayout: 'default#image',
     iconImageHref: 'icons/map-marker.svg',
@@ -20,7 +26,9 @@ const init = () => {
   });
   
   for (var i = 0; i < coords.length; i++) {
-      myCollection.add(new ymaps.Placemark(coords[i]));
+      myCollection.add(new ymaps.Placemark(coords[i], {
+        balloonContent: baloons[i]
+      }));
   }
   
   myMap.geoObjects.add(myCollection);

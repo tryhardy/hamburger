@@ -15,10 +15,37 @@ let eventsInit = () => {
 
     if (playerContainer.hasClass('paused')) {
       player.pauseVideo();
+      let curVol = player.getVolume();
+      $(".player__volume-button").css({
+        left: `${curVol}%`
+      })
     } else {
       player.playVideo();
+      let curVol = player.getVolume();
+      $(".player__volume-button").css({
+        left: `${curVol}%`
+      })
+    }    
+  })
+
+  $(".player__splash").on('click', (e) => {
+    e.preventDefault();
+
+    const btn = $(e.currentTarget);
+
+    if (playerContainer.hasClass('paused')) {
+      player.pauseVideo();
+      let curVol = player.getVolume();
+      $(".player__volume-button").css({
+        left: `${curVol}%`
+      })
+    } else {
+      player.playVideo();
+      let curVol = player.getVolume();
+      $(".player__volume-button").css({
+        left: `${curVol}%`
+      })
     }
-    
   })
 
   $(".player__playback").on('click', (e) => {
@@ -37,6 +64,38 @@ let eventsInit = () => {
   $(".player__playback").on('click', (e) => {
     player.playVideo();
   });
+
+  // ШКАЛА ГРОМКОСТИ ВИДЕО
+  $(".player__volume").on('click', (e) => {
+    const vol = $(e.currentTarget);
+    const clickedVol = e.originalEvent.layerX;
+    const volPercent = (clickedVol / vol.width()) * 100;
+
+    player.setVolume(volPercent)
+
+    $(".player__volume-button").css({
+      left: `${volPercent}%`
+    })
+
+  });
+
+  // ВКЛЮЧЕНИЕ ИЛИ ОТКЛЮЧЕНИЕ ГРОМКОСТИ ВИДЕО
+  $(".player__void-button").on('click', (e) => {
+    if (player.isMuted()) {
+      player.unMute();
+      let curVol = player.getVolume();
+      $(".player__volume-button").css({
+        left: `${curVol}%`
+      })
+    } else {
+      player.mute();
+      $(".player__volume-button").css({
+        left: `0%`
+      })
+    }
+    
+  });
+
 };
 
 const formatTime = timeSec => {
@@ -71,6 +130,7 @@ const onPlayerReady = () => {
     $(".player__duration--completed").text(formatTime(completedSec));
 
   }, 1000)
+
 };
 
 
@@ -98,8 +158,8 @@ const onPlayerStateChange = event => {
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('yt-player', {
-    height: '405',
-    width: '660',
+    height: '100%',
+    width: '100%',
     videoId: 'E5DjLa9Z0s4',
     events: {
       'onReady': onPlayerReady,
@@ -109,9 +169,11 @@ function onYouTubeIframeAPIReady() {
       controls: 0,
       disablekb: 0,
       autoplay: 0,
-      modestbranding: 0,
+      modestbranding: 1,
       rel: 0,
       showinfo: 0,
+      cc_load_policy: 0,
+      iv_load_policy: 3
     }
 
   });

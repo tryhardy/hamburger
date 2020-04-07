@@ -118,6 +118,13 @@ task(
 )
 
 task(
+  "video", () => {
+    return src(`${SRC_PATH}/burger_video.mp4`)
+    .pipe(dest(`${DIST_PATH}/`))
+  }
+)
+
+task(
   "server", () => {
   browserSync.init({
       server: {
@@ -126,6 +133,7 @@ task(
       open:false
   });
 });
+
 
 task(
   "watch", () => {
@@ -136,16 +144,17 @@ task(
   watch(`./${SRC_PATH}/fonts/*`, series("fonts"));
   watch(`./${SRC_PATH}/img/*`, series("img"));
   watch(`./${SRC_PATH}/icons/*`, series("copySvg"));
+  watch(`./${SRC_PATH}/burger_video.mp4`, series("video"));
 })
 
 task(
   "default", 
   series("clean", 
-  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img", "copySvg"), 
+  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img", "copySvg", "video"), 
   parallel("server", "watch"))
 );
 
 task("build", 
   series("clean", 
-  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img", "copySvg"))
+  parallel("copy:html", "styles", "scripts", "icons", "fonts", "img", "copySvg", "video"))
 );
