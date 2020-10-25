@@ -12,6 +12,7 @@
     closeButton.addEventListener('click', (event) => {
       event.preventDefault();
       sectionItem.classList.remove('menu-section__item--active');
+      sectionItem.querySelector(".menu-section__item-wrapper").style.width = "0";
     });
   }
 

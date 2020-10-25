@@ -30,16 +30,16 @@
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
             xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-            //xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
             xhr.send(newData);
 
             xhr.addEventListener('load', () => {
                     if(xhr.response) {
-                        //console.log(xhr.response.message);
-
-                        overlay.open();
-                        overlay.setContent(xhr.response.message);
-                        resetBtn.click();
+                        console.log(xhr);
+                        if(xhr.status !== 422) {
+                            overlay.open();
+                            overlay.setContent(xhr.response.message);
+                            resetBtn.click();
+                        }
                     }
 
                 
@@ -53,10 +53,6 @@
             if (!validateField(formOrder.elements.name)) {
                 valid = false;
             }
-
-            /*if (!validateField(formOrder.elements.email)) {
-                valid = false;
-            }*/
 
             if (!validateField(formOrder.elements.phone)) {
                 valid = false;
@@ -79,6 +75,7 @@
         }
 
         function validateField(field) {
+                console.log(field);
                 field.nextElementSibling.textContent = field.validationMessage;
                 return field.checkValidity;
         }

@@ -57,11 +57,6 @@ task("styles", () => {
     .pipe(reload({stream:true}));
 });
 
-/*const jsLibs = [
-  "node_modules/jquery/dist/jquery.js",
-  "src/js/*.js"
-]*/
-
 task( 
   "scripts", () => {
     return src([
